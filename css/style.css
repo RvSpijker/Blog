@@ -5,11 +5,17 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-:root {
+/* :root {
     --clr-main: #05BFDB;
     --clr-sec: #088395;
     --clr-header: #0A4D68;
     --clr-bg: #00FFCA;
+} */
+:root {                              
+    --clr-main:#FF7F50;
+    --clr-sec:#E6E6FA;
+    --clr-header:#002D2B;
+    --clr-bg:#BCEEDE;
 }
 
 body {
@@ -48,14 +54,16 @@ main {
 .item4 { grid-area: btn; }
 
 .grid-container {
-  display: grid;
-  grid-template-areas:
+    display: grid;
+    grid-template-areas:
     'main main main sec sec'
     'main main main sec2 sec2'
     'main main main btn btn';
-  gap: 10px;
-  background-color: #2196F3;
-  padding: 10px;
+    grid-template-rows: 20 20 20 20 20;
+    grid-template-columns: 30 30 30;
+    gap: 20px;
+    padding: 20px;
+    height: 800px;
 }
 
 .mainblog {
@@ -64,11 +72,14 @@ main {
 }
 
 .blogtitle {
-    
+    width: 100%;
+    text-align: center;
+    margin: 10px;
 }
 
 .blogintro {
-
+    text-align: center;
+    margin: auto;
 }
 
 .blogimg {
@@ -77,4 +88,8 @@ main {
 
 .blogtxt {
 
+}
+
+.secblog {
+    background-color: var(--clr-main);
 }

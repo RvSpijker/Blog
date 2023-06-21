@@ -14,11 +14,10 @@
     <main class="grid-container">
         <div class="item1 mainblog">
             <h1 class="blogtitle">blogtitle</h1>
-            <h2 class="blogintro">blogintroblogintroblogintroblogintroblogintroblogintroblogintro</h2>
+            <h2 class="blogintro">blog intro</h2>
             <img class="blogimg" src="" alt="">
             <p class="blogtxt">a</p>
         </div>
-    </main>
     <div class="item2 secblog">
         <img src="" alt="">
         <h1>title</h1>
@@ -28,5 +27,6 @@
         <h1>title</h1>
     </div>
     <h1 class="item4">See More</h1>
+    </main>
 </body>
 </html>

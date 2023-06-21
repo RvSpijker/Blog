@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header>
-        <h1 class="title">Naam Blog</h1>
-    </header>
+<?php 
+    include 'src/includes/header.php'
+?>
     <main>
         <div class="grid-container">
             <div class="item1 mainblog">
@@ -35,7 +25,9 @@
                 <img class="secblogimg" src="img/reizen.png" alt="">
                 <h1 class="secblogtitle">title</h1>
             </div>
-            <h1 class="item4 btn">See More</h1>
+            <a class="btn item4" href="bloglist.php">
+                <h1>See More</h1>
+            </a>
         </div>
     </main>
 </body>

@@ -40,7 +40,7 @@ main {
 
 .title {
     max-width:100%;
-    width: 100vw;
+    width: 100vw;   
     text-align: center;
     height: 100px;
     line-height: 100px;
@@ -55,11 +55,11 @@ main {
 .grid-container {
     display: grid;
     grid-template-areas:
-    'main sec sec'
-    'main sec2 sec2'
-    'main btn btn';
+    'main sec'
+    'main sec2'
+    'main btn';
     grid-template-rows: auto auto 5%;
-    grid-template-columns: 60% auto;
+    grid-template-columns: auto 33%;
     gap: 20px;
     padding: 20px;
     height: 1000px;
@@ -90,7 +90,7 @@ main {
 }
 
 .blogtxt {
-    
+
 }
 
 .secblog {
@@ -121,4 +121,12 @@ main {
 
 .btn:hover {
     text-decoration: underline;
+}
+
+.grid-container2 {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    padding: 20px;
 }

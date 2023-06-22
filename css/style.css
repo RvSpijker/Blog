@@ -10,20 +10,33 @@
     font-family: MyWebFont;
 }
 
+:root {
+    --clr-main:#B1B2FF;
+    --clr-sec: #AAC4FF;
+    --clr-header: #D2DAFF;
+    --clr-bg: #EEF1FF;
+}
 
+/* :root {
+    --clr-main:#E966A0;
+    --clr-sec: #6554AF;
+    --clr-header: #9575DE;
+    --clr-bg: #9575DE;
+} */
 
+/* blue */
 /* :root {
     --clr-main: #05BFDB;
     --clr-sec: #088395;
-    --clr-header: #0A4D68;
+    --clr-header: #00FFCA;
     --clr-bg: #00FFCA;
 } */
-:root {                              
+/* :root {                              
     --clr-main:#FF7F50;
     --clr-sec:#E6E6FA;
     --clr-header:#002D2B;
     --clr-bg:#BCEEDE;
-}
+} */
 
 body {
     background-color: var(--clr-bg);
@@ -39,7 +52,7 @@ header {
         background: var(--clr-header);
         padding-left: 20px;
         padding-right: 20px;
-        background-image: -moz-linear-gradient(var(--clr-header), var(--clr-main));
+        background-image: -moz-linear-gradient(var(--clr-bg), var(--clr-main));
 }
 
 main {

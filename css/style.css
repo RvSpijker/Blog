@@ -1,9 +1,16 @@
+@font-face {
+    font-family: 'MyWebFont';
+    src: url('../fonts/Rosemary 400.ttf'); /* Safari, Android, iOS */
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: MyWebFont;
 }
+
+
 
 /* :root {
     --clr-main: #05BFDB;
@@ -32,19 +39,55 @@ header {
         background: var(--clr-header);
         padding-left: 20px;
         padding-right: 20px;
+        background-image: -moz-linear-gradient(var(--clr-header), var(--clr-main));
 }
 
 main {
     margin-top: 100px;
 }
 
+.a-title {
+    text-decoration: none;
+}
+
 .title {
-    max-width:100%;
-    width: 100vw;   
+    position: relative;
+    width: 50%;
     text-align: center;
     height: 100px;
     line-height: 100px;
     color: white;
+    margin: auto;
+}
+
+.logindiv {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    right: 20px;
+    top: 0;
+    color: white;
+
+}
+
+.user {
+    position: relative;
+    font-size: 40px;
+    width: 100px;
+    text-align: center;
+    top: 20px;
+}
+
+.login {
+    position: relative;
+    width: 100px;
+    text-align: center;
+    font-size: medium;
+    top: 20px;
+}
+
+.logindiv:hover {
+    text-decoration: underline;
 }
 
 .item1 { grid-area: main; }
@@ -89,9 +132,9 @@ main {
     object-fit: cover;
 }
 
-.blogtxt {
-
-}
+/* .blogtxt {
+    
+} */
 
 .secblog {
     position: relative;
@@ -129,4 +172,51 @@ main {
     grid-template-columns: auto auto auto;
     gap: 20px;
     padding: 20px;
+}
+
+/*============================= Login =============================*/
+
+.inlogform {
+    width: 30%;
+    margin: auto;
+    border: solid;
+    margin-top: 120px;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: var(--clr-sec);
+    margin-bottom: 20px;
+}
+
+.formtitle {
+    width: 100%;
+    text-align: center;
+}
+
+.registerlink {
+    width: 100%;
+    text-align: center;
+}
+
+.input {
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: solid;
+}
+
+.formbutton {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    width: 150px;
+    padding: 5px;
+    justify-content: center;
+    background-color: var(--clr-main);
+    border: solid black 2px;
+    border-radius: 5px;
+    font-size: larger;
+}
+
+.inputdiv {
+    margin-top: 20px;
 }

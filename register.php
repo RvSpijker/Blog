@@ -28,3 +28,9 @@
         <button class="formbutton" type="submit">Registreren</button>
     </form>
 </main>
+<script>
+if(localStorage.namecheck == 1){
+    localStorage.namecheck = 0;
+    alert("Naam / Email al in gebruik");
+}
+</script>

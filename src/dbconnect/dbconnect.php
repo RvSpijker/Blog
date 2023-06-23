@@ -2,7 +2,7 @@
 class dbconnection extends PDO
 {
     private $host = "localhost";
-    private $dbname = "forum";
+    private $dbname = "blog";
     private $user = "root";
     private $pass = "";
     public function __construct()

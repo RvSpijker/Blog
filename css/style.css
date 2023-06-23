@@ -80,7 +80,10 @@ main {
     right: 20px;
     top: 0;
     color: white;
+}
 
+.blogdiv {
+    right: 120px;
 }
 
 .user {

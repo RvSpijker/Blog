@@ -1,3 +1,21 @@
+<?php
+session_start();
+require 'src/helpers/auth-helpers.php';
+require 'src/dbconnect/dbconnect.php';
+
+//user id krijgen
+getLoggedInUserID();
+$user_id = $_SESSION['user_id'];
+
+
+$dbconnect = new dbconnection();
+$sql = "SELECT * FROM users WHERE id = '$user_id'";
+$query = $dbconnect -> prepare($sql);
+$query -> execute() ;
+$recset = $query -> fetchAll(PDO::FETCH_ASSOC);
+
+print_r($recset);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,4 +38,12 @@
                 <h3 class="login">Inloggen</h3>
             </div>
         </a>
+<?php if($recset[0]['admin'] == 1) { ?>
+        <a href="#">
+            <div class="blogdiv logindiv">
+                <i class="user fa-solid fa-circle-plus"></i>
+                <h3 class="login">Add Blog</h3>
+            </div>
+        </a>
+<?php } ?>
     </header>

@@ -1,5 +1,4 @@
 <?php 
-    session_start();
     include 'src/includes/header.php';
 ?>
 <main>

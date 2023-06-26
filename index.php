@@ -1,30 +1,28 @@
 <?php 
-    include 'src/includes/header.php'
+    include 'src/includes/header.php';
+
+    $dbconnect = new dbconnection();
+    $sql = "SELECT * FROM blog ORDER BY `blog`.`id` DESC";
+    $query = $dbconnect -> prepare($sql);
+    $query -> execute();
+    $recset = $query -> fetchAll(PDO::FETCH_ASSOC);
 ?>
     <main>
         <div class="grid-container">
-            <div class="item1 mainblog">
-                <h2 class="blogtitle">De Vreugde van Reizen: Een Ontdekking van Nieuwe Horizonten</h1>
-                <h4 class="blogintro">Reizen is een van de meest opwindende en bevredigende ervaringen die we als mens kunnen hebben. Het opent de deuren naar nieuwe culturen, schitterende landschappen en onvergetelijke ontmoetingen. Of je nu kiest voor een verre exotische bestemming of juist dichter bij huis blijft, reizen biedt ons de mogelijkheid om te ontsnappen aan de dagelijkse sleur en de wereld op een andere manier te ervaren. In deze blog duiken we dieper in de vreugde van reizen en waarom het zo'n impact op ons heeft.</h2>
-                <img class="blogimg" src="img/reizen.png" alt="">
-                <p class="blogtxt">Reizen is als een reis naar de ziel. Het laat ons kennismaken met nieuwe perspectieven, uitdagende situaties en verrassende ontdekkingen. Het doet ons beseffen dat de wereld groter is dan we ons kunnen voorstellen en dat er nog zoveel te ontdekken valt.
-                    <br>
-                    Een van de grootste vreugdes van reizen is het ervaren van verschillende culturen. Het proeven van lokale gerechten, het onderdompelen in tradities en het communiceren met mensen van over de hele wereld opent onze geest en verruimt onze horizon. Het geeft ons een dieper begrip van diversiteit en verrijkt ons leven op een unieke manier.
-                    <br>
-                    Daarnaast biedt reizen adembenemende landschappen die ons sprakeloos achterlaten. Van majestueuze bergtoppen tot uitgestrekte oceaanzichten, de natuurlijke schoonheid die we ontdekken tijdens het reizen is betoverend. Het herinnert ons eraan hoe klein we zijn in vergelijking met de wonderen van de wereld en wekt een gevoel van verwondering en nederigheid op.
-                    <br>
-                    Bovendien zorgt reizen voor ontmoetingen met mensen die ons leven verrijken. De vriendelijke glimlach van een vreemdeling, het delen van verhalen en ervaringen met lokale bewoners of het maken van vriendschappen die een leven lang meegaan, zijn allemaal kostbare momenten die we koesteren. Deze menselijke verbindingen laten ons zien dat, ondanks onze verschillen, we allemaal op een dieper niveau met elkaar verbonden zijn.
-                    <br>
-                    Kortom, de vreugde van reizen ligt in het ontdekken van nieuwe horizonten, zowel binnen als buiten onszelf. Het verrijkt ons leven, vergroot ons begrip en opent ons hart voor het onbekende. Dus pak je koffers, laat jezelf meeslepen door avontuur en omarm de vreugde van reizen. De wereld wacht op je!</p>
-            </div>
-            <div class="item2 secblog">
-                <img  class="secblogimg" src="img/reizen.png" alt="">
-                <h1 class="secblogtitle">title</h1>
-            </div>
-            <div class="item3 secblog">
-                <img class="secblogimg" src="img/reizen.png" alt="">
-                <h1 class="secblogtitle">title</h1>
-            </div>
+            <a href="bigblog.php?title=<?= $recset[0]["title"]; ?>" class="item1 mainblog">
+                <h2 class="blogtitle"><?= $recset[0]["title"]; ?></h2>
+                <h4 class="blogintro"><?= $recset[0]["intro"]; ?></h4>
+                <img class="blogimg" src="img/blogimg/<?= $recset[0]["img"]; ?>" alt="">
+                <p class="blogtxt"><?= $recset[0]["text"]; ?></p>
+            </a>
+            <a href="bigblog.php?title=<?= $recset[1]["title"]; ?>" class="item2 secblog">
+                <img  class="secblogimg" src="img/blogimg/<?= $recset[1]["img"]; ?>" alt="">
+                <h1 class="secblogtitle"><?= $recset[1]["title"]; ?></h1>
+            </a>
+            <a href="bigblog.php?title=<?= $recset[2]["title"]; ?>" class="item3 secblog">
+                <img class="secblogimg" src="img/blogimg/<?= $recset[2]["img"]; ?>" alt="">
+                <h1 class="secblogtitle"><?= $recset[2]["title"]; ?></h1>
+            </a>
             <a class="btn item4" href="bloglist.php">
                 <h1>See More</h1>
             </a>

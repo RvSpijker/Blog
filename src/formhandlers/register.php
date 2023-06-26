@@ -7,7 +7,7 @@ if($_SERVER['REQUEST_METHOD'] != 'POST') {
 require '../dbconnect/dbcredentials.php';
 
 // Connectie is geslaagd, dus nu kunnen we de gegevens vastleggen in de database
-$firstname = htmlentities( $_POST['firstname'] );
+$username = htmlentities( $_POST['username'] );
 $lastname = htmlentities( $_POST['lastname'] );
 $prefix = htmlentities( $_POST['prefix'] );
 $email = htmlentities( $_POST['email'] );
@@ -17,7 +17,7 @@ require '../dbconnect/dbconnect.php';
 
 $dbconnect = new dbconnection();
 
-$sql = "SELECT * FROM users WHERE firstname = '$firstname' OR email = '$email'";
+$sql = "SELECT * FROM users WHERE username = '$username' OR email = '$email'";
 
 $query = $dbconnect -> prepare($sql);
 
@@ -28,12 +28,10 @@ $recset = $query -> fetchAll(PDO::FETCH_ASSOC);
 
 if($recset == false) {
 
-$sql = "INSERT INTO `users`(`firstname`, `lastname`, `prefix`, `email`, `password`)
-        VALUES(:firstname, :lastname, :prefix, :email, :password)";
+$sql = "INSERT INTO `users`(`username`, `email`, `password`)
+        VALUES(:username, :email, :password)";
 $placeholders = [
-    ':firstname' => $firstname,
-    ':lastname' => $lastname,
-    ':prefix' => $prefix,
+    ':username' => $username,
     ':email' => $email,
     ':password' => $password,
 ];

@@ -8,7 +8,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: MyWebFont;
+    text-decoration: none;
 }
+
+/*============================= colors =============================*/
 
 :root {
     --clr-main:#B1B2FF;
@@ -38,25 +41,28 @@
     --clr-bg:#BCEEDE;
 } */
 
+/*============================= # =============================*/
+
 body {
     background-color: var(--clr-bg);
 }
 
-header {
-        position: absolute;
-        width: 100vw;
-        max-width:100%;
-        height: 100px;
-        left: 0px;
-        top: 0px;
-        background: var(--clr-header);
-        padding-left: 20px;
-        padding-right: 20px;
-        background-image: -moz-linear-gradient(var(--clr-bg), var(--clr-main));
+main {
 }
 
-main {
-    margin-top: 100px;
+/*============================= header =============================*/
+
+header {
+    position: ;
+    width: 100vw;
+    max-width:100%;
+    height: 100px;
+    left: 0px;
+    top: 0px;
+    background: var(--clr-header);
+    padding-left: 20px;
+    padding-right: 20px;
+    background-image: -moz-linear-gradient(var(--clr-bg), var(--clr-main));
 }
 
 .a-title {
@@ -106,6 +112,8 @@ main {
     text-decoration: underline;
 }
 
+/*============================= grid =============================*/
+
 .item1 { grid-area: main; }
 .item2 { grid-area: sec; }
 .item3 { grid-area: sec2; }
@@ -117,12 +125,14 @@ main {
     'main sec'
     'main sec2'
     'main btn';
-    grid-template-rows: auto auto 5%;
-    grid-template-columns: auto 33%;
+    grid-template-rows: 45% 45% 5%;
+    grid-template-columns: 66% 33%;
     gap: 20px;
     padding: 20px;
     height: 1000px;
 }
+
+/*============================= index =============================*/
 
 .mainblog {
     background-color: var(--clr-main);
@@ -143,14 +153,14 @@ main {
 }
 
 .blogimg {
-    width: 100%;
     height: 400px;
     object-fit: cover;
+    width: 100%;
 }
 
-/* .blogtxt {
-    
-} */
+.blogtxt {
+    word-wrap: break-word;
+}
 
 .secblog {
     position: relative;
@@ -166,6 +176,7 @@ main {
     line-height: 60px;
     width: 100%;
     text-align: center;
+    word-wrap: break-word;
 }
 .secblogimg {
     object-fit: cover;
@@ -182,6 +193,8 @@ main {
     text-decoration: underline;
 }
 
+/*============================= bloglist =============================*/
+
 .grid-container2 {
     display: grid;
     grid-template-rows: auto auto auto;
@@ -196,7 +209,7 @@ main {
     width: 30%;
     margin: auto;
     border: solid;
-    margin-top: 120px;
+    margin-top: 20px;
     border-radius: 5px;
     padding: 20px;
     background-color: var(--clr-sec);
@@ -235,4 +248,133 @@ main {
 
 .inputdiv {
     margin-top: 20px;
+}
+
+/*============================= addblog =============================*/
+
+.b-inlogform {
+    width: 70%;
+    margin: auto;
+    border: solid;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: var(--clr-sec);
+    margin-bottom: 20px;
+}
+
+.b-formtitle {
+    width: 100%;
+    text-align: center;
+}
+
+.b-registerlink {
+    width: 100%;
+    text-align: center;
+}
+
+.b-input {
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: solid;
+}
+
+.b-inputintro {
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: solid;
+    height: 100px;
+    resize: none;
+}
+
+.b-inputtext {
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: solid;
+    height: 300px;
+    resize: none;
+}
+
+.b-formbutton {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    width: 150px;
+    padding: 5px;
+    justify-content: center;
+    background-color: var(--clr-main);
+    border: solid black 2px;
+    border-radius: 5px;
+    font-size: larger;
+}
+
+/*============================= bigblog =============================*/
+
+.bigmainblog {
+    background-color: var(--clr-main);
+    color: white;
+    padding: 20px;
+    margin: 20px;
+}
+
+.bigblogtitle {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+.bigblogintro {
+    text-align: center;
+    margin: auto;
+    margin: 10px;
+}
+
+.bigblogimg {
+    height: 400px;
+    object-fit: contain;
+    width: 100%;
+}
+
+.bigblogtxt {
+    word-wrap: break-word;
+}
+
+/*============================= Commnets =============================*/
+
+.commentdiv {
+    display: inline-block;
+    margin: 20px;
+    box-sizing: content-box;
+    border-radius: 35px;
+    height: 70px;
+    background-color: var(--clr-bg);
+    width: auto;
+    color: black;
+    height: fit-content;
+    max-width: 70vw;
+}
+
+.commentimg {
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    float: left;
+}
+
+.username {
+    margin-top: 5px;
+    margin-left: 80px;
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+.commenttext {
+    margin-left: 80px;
+    margin-top: 10px;
+    margin-right: 20px;
+    font-size: 20px;
+    word-wrap: break-word;
 }

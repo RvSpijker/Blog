@@ -5,16 +5,17 @@ require 'src/dbconnect/dbconnect.php';
 
 //user id krijgen
 getLoggedInUserID();
-$user_id = $_SESSION['user_id'];
-
+if (isset($_SESSION['user_id'])) {
+    $user_id = $_SESSION['user_id'];
+} else {
+    $user_id = 0;
+}
 
 $dbconnect = new dbconnection();
 $sql = "SELECT * FROM users WHERE id = '$user_id'";
 $query = $dbconnect -> prepare($sql);
 $query -> execute() ;
 $recset = $query -> fetchAll(PDO::FETCH_ASSOC);
-
-print_r($recset);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +26,7 @@ print_r($recset);
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/favicon2.gif" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/ded3297a45.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/ded3297a45.js" crossorigin="anonymous"></script> -->
 </head>
 <body>
     <header>
@@ -38,12 +39,15 @@ print_r($recset);
                 <h3 class="login">Inloggen</h3>
             </div>
         </a>
-<?php if($recset[0]['admin'] == 1) { ?>
-        <a href="#">
+<?php 
+    if ($recset == true) {
+    if($recset[0]['admin'] == 1) {
+?>
+        <a href="addblog.php">
             <div class="blogdiv logindiv">
                 <i class="user fa-solid fa-circle-plus"></i>
                 <h3 class="login">Add Blog</h3>
             </div>
         </a>
-<?php } ?>
+<?php } } ?>
     </header>

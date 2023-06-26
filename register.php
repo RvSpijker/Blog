@@ -5,16 +5,8 @@
     <form class="inlogform" action="src/formhandlers/register.php" method="POST">
         <h1 class="formtitle">Registeren</h1>
         <div class="inputdiv">
-            <label for="voornaam">Voornaam</label><br>
-            <input class="input" type="text" id="voornaam" name="firstname" placeholder="Voornaam"/>
-        </div>
-        <div class="inputdiv">
-            <label for="achternaam">Achternaam</label><br>
-            <input class="input" type="text" id="achternaam" name="lastname" placeholder="Achternaam"/>
-        </div>
-        <div class="inputdiv">
-            <label for="tussenvoegsels">Tussenvoegsels</label><br>
-            <input class="input" type="text" id="tussenvoegsels" name="prefix" placeholder="Tussenvoegsels(optional)"/>
+            <label for="username">username</label><br>
+            <input class="input" type="text" id="username" name="username" placeholder="username"/>
         </div>
         <div class="inputdiv">
             <label for="email">Email</label><br>

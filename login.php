@@ -16,3 +16,5 @@
     </form>
     <a class="registerlink" href="register.php"><h1 id="registerbutton">Create an account</h1></a>
 </main>
+</body>
+</html>

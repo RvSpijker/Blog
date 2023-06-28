@@ -25,3 +25,5 @@ if(localStorage.namecheck == 1){
     alert("Naam / Email al in gebruik");
 }
 </script>
+</body>
+</html>

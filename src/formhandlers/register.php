@@ -8,8 +8,6 @@ require '../dbconnect/dbcredentials.php';
 
 // Connectie is geslaagd, dus nu kunnen we de gegevens vastleggen in de database
 $username = htmlentities( $_POST['username'] );
-$lastname = htmlentities( $_POST['lastname'] );
-$prefix = htmlentities( $_POST['prefix'] );
 $email = htmlentities( $_POST['email'] );
 $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 

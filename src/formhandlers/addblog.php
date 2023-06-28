@@ -33,5 +33,5 @@ $db_statement->execute($placeholders);
 
 // Na het succesvol vastleggen in de database laten we de gebruiker
 // terugkeren naar het login scherm
-// header('location: ../../login.php');
-// exit();
+header('location: ../../index.php');
+exit();

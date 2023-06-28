@@ -47,13 +47,9 @@ body {
     background-color: var(--clr-bg);
 }
 
-main {
-}
-
 /*============================= header =============================*/
 
 header {
-    position: ;
     width: 100vw;
     max-width:100%;
     height: 100px;
@@ -346,7 +342,7 @@ header {
 
 .commentdiv {
     display: inline-block;
-    margin: 20px;
+    margin: 20px 0px 20px 0px;
     box-sizing: content-box;
     border-radius: 35px;
     height: 70px;
@@ -377,4 +373,90 @@ header {
     margin-right: 20px;
     font-size: 20px;
     word-wrap: break-word;
+}
+
+/*============================= place commnet =============================*/
+
+.item5 { grid-area: username; }
+.item6 { grid-area: text; }
+.item7 { grid-area: button; }
+.item8 { grid-area: img; }
+
+.grid-container3 {
+    grid-template-areas:
+    'img username button'
+    'img text button';
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 70px 50% auto;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+}
+
+.plc-commentdiv {
+    /*____________________________________*/
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+    height: 70px;
+    color: black;
+    /* background-color: var(--clr-bg); */
+    border-bottom: solid;
+    border-bottom-left-radius: 35px;
+    width: 100%;
+}
+
+.plc-commentimg {
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    float: left;
+}
+
+.plc-username {
+    margin-top: 5px;
+    margin-left: 75px;
+    margin-right: 20px;
+    font-size: 25px;
+    width: 100%;
+}
+
+.plc-commenttext {
+    margin-left: 55px;
+    font-size: 20px;
+    border: none;
+    background-color: var(--clr-main);
+    width: 100%;
+}
+
+.plc-commenttext:focus {
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+.plc-button {
+    margin-left: auto;
+    width: 100px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    font-size: 20px;
+
+    /* remove button stlye */
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	outline: inherit;
+}
+
+
+
+.grid-container {
+
+    gap: 20px;
+    padding: 20px;
+    height: 1000px;
 }

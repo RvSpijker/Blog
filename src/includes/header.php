@@ -15,7 +15,7 @@ $dbconnect = new dbconnection();
 $sql = "SELECT * FROM users WHERE id = '$user_id'";
 $query = $dbconnect -> prepare($sql);
 $query -> execute() ;
-$recset = $query -> fetchAll(PDO::FETCH_ASSOC);
+$user = $query -> fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,23 +26,31 @@ $recset = $query -> fetchAll(PDO::FETCH_ASSOC);
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/favicon2.gif" type="image/x-icon">
-    <!-- <script src="https://kit.fontawesome.com/ded3297a45.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/ded3297a45.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <a class="a-title" href="index.php">
             <h1 class="title">Naam Blog</h1>
         </a>
-        <a href="login.php">
-            <div class="logindiv">
-                <i class="user fa-solid fa-user"></i>
-                <h3 class="login">Inloggen</h3>
-            </div>
-        </a>
-<?php 
-    if ($recset == true) {
-    if($recset[0]['admin'] == 1) {
-?>
+        <?php if ($user) { ?>
+            <a href="profile.php">
+                <div class="logindiv">
+                    <i class="user fa-solid fa-user"></i>
+                    <h3 class="login">Profile</h3>
+                </div>
+            </a>
+        <?php } else { ?>
+            <a href="login.php">
+                <div class="logindiv">
+                    <i class="user fa-solid fa-user"></i>
+                    <h3 class="login">Inloggen</h3>
+                </div>
+            </a>
+        <?php }
+            if ($user) {
+                if($user[0]['admin'] == 1) {
+        ?>
         <a href="addblog.php">
             <div class="blogdiv logindiv">
                 <i class="user fa-solid fa-circle-plus"></i>

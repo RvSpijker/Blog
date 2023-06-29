@@ -375,7 +375,7 @@ header {
     word-wrap: break-word;
 }
 
-/*============================= place commnet =============================*/
+/*============================= place comments =============================*/
 
 .item5 { grid-area: username; }
 .item6 { grid-area: text; }
@@ -455,8 +455,167 @@ header {
 
 
 .grid-container {
-
     gap: 20px;
     padding: 20px;
     height: 1000px;
+}
+
+/*============================= Profile =============================*/
+
+.profiletitle {
+    margin: auto;
+    width: 50vw;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profilediv {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 2px solid #000;
+    background: var(--clr-sec);
+    width: 650px;
+    height: 300px;
+    padding: 20px;
+}
+
+/* .profileform {
+    
+} */
+
+.imgdiv {
+    width: 100px;
+    margin: 20px;
+    height: 150px;
+    float: left;
+}
+
+.imgdiv2 {
+    width: 100px;
+    margin: 20px;
+    margin-top: 20px;
+    height: 150px;
+    float: left;
+}
+
+.profilepic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.profilepictext {
+    width: 100%;
+    text-align: center;
+}
+
+.name {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.profilebtn1 {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 90px;
+    width: 50%;
+    height: 50px;
+    background-color: var(--clr-main);
+    border: solid 2px;
+    border-radius: 100px;
+
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    cursor: pointer;
+
+}
+
+.profilebtn2 {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    width: 50%;
+    height: 50px;
+    background-color: rgb(255, 112, 112);
+    border: solid 2px;
+    border-radius: 100px;
+
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+
+}
+
+.btn2 {
+    border: 2px solid black;
+    background-color: white;
+    padding: 6px 6px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.editusername {
+    margin-top: 20px;
+    width: 310px;
+    border: none;
+    background: inherit;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.editusername::placeholder {
+    color: grey;
+    opacity: 1; /* Firefox */
+}
+
+.editemail {
+    width: 355px;
+    border: none;
+    background: inherit;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.editemail::placeholder {
+    color: grey;
+    opacity: 1; /* Firefox */
+}
+
+.name2 {
+    float: left;
+    margin-top: 20px;
+}
+
+.email2 {
+    float: left;
 }

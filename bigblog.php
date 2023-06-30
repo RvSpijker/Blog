@@ -21,6 +21,7 @@
 
     if($user_id == 0) {
         $user[0]["username"] = 'Login to Comment';
+        $user[0]["profilepic"] = 'user.png';
     }
 ?>
     <main>

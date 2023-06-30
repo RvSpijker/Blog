@@ -1,10 +1,10 @@
 <?php 
     include 'src/includes/header.php';
     
-    $title = $_GET['title'];
+    $id = $_GET['id'];
 
     $dbconnect = new dbconnection();
-    $sql = "SELECT * FROM blog WHERE title = '$title' ORDER BY `blog`.`id` DESC";
+    $sql = "SELECT * FROM blog WHERE id = '$id' ORDER BY `blog`.`id` DESC";
     $query = $dbconnect -> prepare($sql);
     $query -> execute();
     $recset = $query -> fetchAll(PDO::FETCH_ASSOC);

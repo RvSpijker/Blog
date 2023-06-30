@@ -10,9 +10,9 @@
 <main>
     <div class="grid-container2">
 <?php foreach($recset as $key => $value){ ?>
-        <a href="bigblog.php?title=<?= $value["title"]; ?>" class="secblog">
+        <a href="bigblog.php?id=<?= $value["id"]; ?>" class="secblog">
             <img  class="secblogimg" src="img/blogimg/<?= $value["img"]; ?>" alt="">
-            <h1 class="secblogtitle"><?= $value["title"]; ?></h1>
+            <input class="secblogtitle" value="<?= $value["title"]; ?>" disabled/>
         </a>
         <?php } ?>
     </div>

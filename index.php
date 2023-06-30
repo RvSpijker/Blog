@@ -9,19 +9,19 @@
 ?>
     <main>
         <div class="grid-container">
-            <a href="bigblog.php?title=<?= $recset[0]["title"]; ?>" class="item1 mainblog">
+            <a href="bigblog.php?id=<?= $recset[0]["id"]; ?>" class="item1 mainblog">
                 <h2 class="blogtitle"><?= $recset[0]["title"]; ?></h2>
                 <h4 class="blogintro"><?= $recset[0]["intro"]; ?></h4>
                 <img class="blogimg" src="img/blogimg/<?= $recset[0]["img"]; ?>" alt="">
                 <p class="blogtxt"><?= $recset[0]["text"]; ?></p>
             </a>
-            <a href="bigblog.php?title=<?= $recset[1]["title"]; ?>" class="item2 secblog">
+            <a href="bigblog.php?id=<?= $recset[1]["id"]; ?>" class="item2 secblog">
                 <img  class="secblogimg" src="img/blogimg/<?= $recset[1]["img"]; ?>" alt="">
-                <h1 class="secblogtitle"><?= $recset[1]["title"]; ?></h1>
+                <input class="secblogtitle" value="<?= $recset[1]["title"]; ?>" disabled/>
             </a>
-            <a href="bigblog.php?title=<?= $recset[2]["title"]; ?>" class="item3 secblog">
+            <a href="bigblog.php?id=<?= $recset[2]["id"]; ?>" class="item3 secblog">
                 <img class="secblogimg" src="img/blogimg/<?= $recset[2]["img"]; ?>" alt="">
-                <h1 class="secblogtitle"><?= $recset[2]["title"]; ?></h1>
+                <input class="secblogtitle" value="<?= $recset[2]["title"]; ?>" disabled/>
             </a>
             <a class="btn item4" href="bloglist.php">
                 <h1>See More</h1>

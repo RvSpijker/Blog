@@ -17,7 +17,7 @@
             <br>
             <h2 class="email2">email:&nbsp;</h2>
             <input class="editemail" type="email" name="email" value="<?= $user[0]['email'] ?>"/>
-            <input type="file" name="uploadfile"/>
+            <input class="profilefile" type="file" name="uploadfile"/>
             <button class="profilebtn1" type="submit">Confirm</button>
         </form>
         <button onclick="window.location.href='profile.php';" class="profilebtn2">Cancel</button>

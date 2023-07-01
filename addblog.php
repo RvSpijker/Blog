@@ -23,6 +23,7 @@
         <button class="b-formbutton" type="submit">Post</button>
     </form>
 </main>
+<script src="js/main.js"></script>
 </body>
 </html>
 <!-- $dbconnect = new dbconnection();

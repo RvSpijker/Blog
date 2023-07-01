@@ -49,7 +49,16 @@ $user = $query -> fetchAll(PDO::FETCH_ASSOC);
                     <h3 class="login">Inloggen</h3>
                 </div>
             </a>
-        <?php }
+        <?php } ?>
+        <button onclick="FunctionTheme()" class="theme" id="theme">
+            <i class="user fa-solid fa-moon"></i>
+            <h3 class="login">Dark</h3>
+        </button>
+        <button onclick="FunctionTheme()" class="theme" id="theme2">
+            <i class="user fa-solid fa-sun"></i>
+            <h3 class="login">Light</h3>
+        </button>
+        <?php
             if ($user) {
                 if($user[0]['admin'] == 1) {
         ?>

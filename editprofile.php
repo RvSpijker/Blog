@@ -23,5 +23,6 @@
         <button onclick="window.location.href='profile.php';" class="profilebtn2">Cancel</button>
     </div>
 </main>
+<script src="js/main.js"></script>
 </body>
 </html>

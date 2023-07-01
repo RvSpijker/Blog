@@ -16,5 +16,6 @@
     </form>
     <a class="registerlink" href="register.php"><h1 id="registerbutton">Create an account</h1></a>
 </main>
+<script src="js/main.js"></script>
 </body>
 </html>

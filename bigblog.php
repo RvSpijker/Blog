@@ -85,5 +85,6 @@
         <h4 class="date"><?= $recset[0]['date'] ?></h4>
         </div>
     </main>
+<script src="js/main.js"></script>
 </body>
 </html>

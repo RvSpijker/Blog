@@ -31,14 +31,15 @@
 /*============================= Login =============================*/
 
 .inlogform {
+    background-color: var(--primary-button);
     width: 80%;
     margin: auto;
-    border: solid;
+    border:black solid;
     margin-top: 20px;
-    border-radius: 5px;
+    border-radius: 6px;
     padding: 20px;
-    background-color: var(--clr-sec);
     margin-bottom: 20px;
+    color: var(--text);
 }
 
 .formtitle {
@@ -49,12 +50,19 @@
 .registerlink {
     width: 100%;
     text-align: center;
+    color: var(--text);
+}
+
+.registerlink:hover {
+    text-decoration: underline;
 }
 
 .input {
+    color: var(--text);
+    background-color: var(--background);
     padding: 10px;
     width: 100%;
-    border-radius: 5px;
+    border-radius: 6px;
     border: solid;
 }
 
@@ -65,10 +73,11 @@
     width: 150px;
     padding: 5px;
     justify-content: center;
-    background-color: var(--clr-main);
+    background-color: var(--accent);
     border: solid black 2px;
-    border-radius: 5px;
+    border-radius: 6px;
     font-size: larger;
+    color: var(--text);
 }
 
 .inputdiv {
@@ -86,6 +95,7 @@
     width: 50vw;
     text-align: center;
     margin-top: 20px;
+    color: var(--text);
 }
 
 .profilediv {
@@ -95,13 +105,14 @@
     left: 0;
     right: 0;
     margin-top: 20px;
-    border-radius: 5px;
+    border-radius: 6px;
     border: 2px solid #000;
-    background: var(--clr-sec);
+    background: var(--secondary-button);
     width: 95vw;
     max-width:95%;
     padding: 20px;  
     height: 400px;
+    color: var(--text);
 }
 
 /* .profileform {
@@ -147,8 +158,8 @@
     bottom: 90px;
     width: 50%;
     height: 50px;
-    background-color: var(--clr-main);
-    border: solid 2px;
+    background-color: var(--primary-button);
+    border:black solid 2px;
     border-radius: 100px;
 
     text-align: center;
@@ -156,6 +167,7 @@
     font-weight: 700;
     cursor: pointer;
 
+    color: var(--text);
 }
 
 .profilebtn2 {
@@ -167,14 +179,16 @@
     bottom: 20px;
     width: 50%;
     height: 50px;
-    background-color: rgb(255, 112, 112);
-    border: solid 2px;
+    background-color: var(--accent);
+    border:black solid 2px;
     border-radius: 100px;
 
     text-align: center;
     font-size: 24px;
     font-weight: 700;
     cursor: pointer;
+
+    color: var(--text);
 }
 
 .editusername {
@@ -183,6 +197,7 @@
     font-size: 24px;
     font-weight: bold;
     text-decoration: underline;
+    color: var(--text);
 }
 
 .editusername::placeholder {
@@ -197,6 +212,7 @@
     font-size: 24px;
     font-weight: bold;
     text-decoration: underline;
+    color: var(--text);
 }
 
 .editemail::placeholder {

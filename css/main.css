@@ -13,38 +13,34 @@
     
     /*============================= colors =============================*/
     
-    :root {
-        --clr-main:#B1B2FF;
-        --clr-sec: #AAC4FF;
-        --clr-header: #D2DAFF;
-        --clr-bg: #EEF1FF;
+    /* :root {
+        --primary-button:#B1B2FF;
+        --secondary-butto: #AAC4FF;
+        --accent: #D2DAFF;
+        --background: #EEF1FF;
+    } */
+
+:root,
+    :root.dark {
+        --text: #e6d9f7;
+        --background: #07030d;
+        --primary-button: #742bd4;
+        --secondary-button: #17092a;
+        --accent: #8241d8;
     }
-    
-    /* :root {
-        --clr-main:#E966A0;
-        --clr-sec: #6554AF;
-        --clr-header: #9575DE;
-        --clr-bg: #9575DE;
-    } */
-    
-    /* blue */
-    /* :root {
-        --clr-main: #05BFDB;
-        --clr-sec: #088395;
-        --clr-header: #00FFCA;
-        --clr-bg: #00FFCA;
-    } */
-    /* :root {                              
-        --clr-main:#FF7F50;
-        --clr-sec:#E6E6FA;
-        --clr-header:#002D2B;
-        --clr-bg:#BCEEDE;
-    } */
+
+    :root.light {
+        --text: #031c26;
+        --background: #d5f1fc;
+        --primary-button: #a1b3f7;
+        --secondary-button: #c7b4f9;
+        --accent: #b9a1f7;
+    }
     
     /*============================= # =============================*/
     
     body {
-        background-color: var(--clr-bg);
+        background-color: var(--background);
     }
     
     /*============================= header =============================*/
@@ -55,10 +51,10 @@
         height: 100px;
         left: 0px;
         top: 0px;
-        background: var(--clr-header);
+        background: var(--accent);
         padding-left: 20px;
         padding-right: 20px;
-        background-image: -moz-linear-gradient(var(--clr-bg), var(--clr-main));
+        background-image: -moz-linear-gradient(var(--background), var(--primary-button));
     }
     
     .a-title {
@@ -71,17 +67,17 @@
         text-align: center;
         height: 100px;
         line-height: 100px;
-        color: white;
+        color: var(--text);
         margin: auto;
     }
     
     .logindiv {
         position: absolute;
-        width: 100px;
+        width: 80px;
         height: 100px;
         right: 20px;
         top: 0;
-        color: white;
+        color: var(--text);
     }
     
     .blogdiv {
@@ -91,14 +87,14 @@
     .user {
         position: relative;
         font-size: 40px;
-        width: 100px;
+        width: 80px;
         text-align: center;
         top: 20px;
     }
     
     .login {
         position: relative;
-        width: 100px;
+        width: 80px;
         text-align: center;
         font-size: medium;
         top: 20px;
@@ -107,34 +103,39 @@
     .logindiv:hover {
         text-decoration: underline;
     }
+
+    .theme {
+        /* remove button style */
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+
+        position: absolute;
+        width: 80px;
+        height: 100px;
+        right: 100px;
+        top: -20px;
+        color: var(--text);
+        border: none;
+    }
+    
+    .theme:hover {
+        text-decoration: underline;
+    }
     
     /*============================= grid =============================*/
-    
-    /* .item1 { grid-area: main; }
-    .item2 { grid-area: sec; }
-    .item3 { grid-area: sec2; }
-    .item4 { grid-area: btn; }
-    
-    .grid-container {
-        display: grid;
-        grid-template-areas:
-        'main sec'
-        'main sec2'
-        'main btn';
-        grid-template-rows: 45% 45% 5%;
-        grid-template-columns: 66% 33%;
-        gap: 20px;
-        padding: 20px;
-        height: 1000px;
-    } */
     
     /*============================= index =============================*/
     
     .mainblog {
-        background-color: var(--clr-main);
-        color: white;
+        background-color: var(--primary-button);
+        color: var(--text);
         padding: 20px;
-        border-radius: 5px;
+        border-radius: 6px;
     }
     
     .blogtitle {
@@ -161,16 +162,16 @@
     
     .secblog {
         position: relative;
-        background-color: var(--clr-main);
-        color: white;
+        background-color: var(--primary-button);
+        color: var(--text);
         padding: 20px 20px 60px 20px;
-        border-radius: 5px;
+        border-radius: 6px;
     }
     
     .secblogtitle {
         border: none;
         background-color: inherit;
-        color: white;
+        color: var(--text);
         width: 100%;
         text-align: center;
         font-size: larger;
@@ -184,8 +185,12 @@
     }
     
     .btn {
-        width: 100%;
+        background-color: var(--accent);
+        color: var(--text);
+        margin: auto;
+        width: 50%;
         text-align: center;
+        border-radius: 100px;
     }
     
     .btn:hover {
@@ -206,13 +211,14 @@
     /*============================= addblog =============================*/
     
     .b-inlogform {
+        color: var(--text);
         width: 70%;
         margin: auto;
         border: solid;
         margin-top: 20px;
-        border-radius: 5px;
+        border-radius: 6px;
         padding: 20px;
-        background-color: var(--clr-sec);
+        background-color: var(--secondary-butto);
         margin-bottom: 20px;
     }
     
@@ -227,25 +233,28 @@
     }
     
     .b-input {
+        background-color: var(--primary-button);
         padding: 10px;
         width: 100%;
-        border-radius: 5px;
-        border: solid;
+        border-radius: 6px;
+        border: solid black;
     }
     
     .b-inputintro {
+        background-color: var(--primary-button);
         padding: 10px;
         width: 100%;
-        border-radius: 5px;
+        border-radius: 6px;
         border: solid;
         height: 100px;
         resize: none;
     }
     
     .b-inputtext {
+        background-color: var(--primary-button);
         padding: 10px;
         width: 100%;
-        border-radius: 5px;
+        border-radius: 6px;
         border: solid;
         height: 300px;
         resize: none;
@@ -258,20 +267,20 @@
         width: 150px;
         padding: 5px;
         justify-content: center;
-        background-color: var(--clr-main);
+        background-color: var(--primary-button);
         border: solid black 2px;
-        border-radius: 5px;
+        border-radius: 6px;
         font-size: larger;
     }
     
     /*============================= bigblog =============================*/
     
     .bigmainblog {
-        background-color: var(--clr-main);
-        color: white;
+        background-color: var(--primary-button);
+        color: var(--text);
         padding: 20px;
         margin: 20px;
-        border-radius: 5px;
+        border-radius: 6px;
     }
     
     .bigblogtitle {
@@ -292,9 +301,9 @@
         width: 100%;
     }
     
-    .bigblogtxt {
-        word-wrap: break-word;
-    }
+    /* .bigblogtxt {
+
+    } */
 
     .date {
         width: 100%;
@@ -302,7 +311,7 @@
     }
     
     .heart {
-        color: white;
+        color: var(--text);
         font-size: 30px;
         text-decoration: none;
     }
@@ -335,7 +344,7 @@
         box-sizing: content-box;
         border-radius: 35px;
         height: 70px;
-        background-color: var(--clr-bg);
+        background-color: var(--background);
         width: auto;
         color: black;
         height: fit-content;
@@ -350,6 +359,7 @@
     }
     
     .username {
+        color: var(--text);
         margin-top: 5px;
         margin-left: 80px;
         margin-right: 20px;
@@ -357,6 +367,7 @@
     }
     
     .commenttext {
+        color: var(--text);
         margin-left: 80px;
         margin-top: 10px;
         margin-right: 20px;
@@ -390,10 +401,11 @@
         display: inline-block;
         height: 70px;
         color: black;
-        /* background-color: var(--clr-bg); */
+        /* background-color: var(--background); */
         border-bottom: solid;
         border-bottom-left-radius: 35px;
         width: 100%;
+        color: var(--text);
     }
     
     .plc-commentimg {
@@ -415,7 +427,7 @@
         margin-left: 55px;
         font-size: 20px;
         border: none;
-        background-color: var(--clr-main);
+        background-color: var(--primary-button);
         width: 100%;
     }
     
@@ -429,8 +441,8 @@
         margin-left: auto;
         width: 100px;
         height: 40px;
-        background-color: black;
-        color: white;
+        background-color: var(--accent);
+        color: var(--text);
         border-radius: 50px;
         font-size: 20px;
     

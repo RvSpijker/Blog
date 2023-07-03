@@ -1,464 +1,459 @@
 @font-face {
-        font-family: 'MyWebFont';
-        src: url('../fonts/Rosemary 400.ttf'); /* Safari, Android, iOS */
-    }
-    
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: MyWebFont;
-        text-decoration: none;
-    }
-    
-    /*============================= colors =============================*/
-    
-    /* :root {
-        --primary-button:#B1B2FF;
-        --secondary-butto: #AAC4FF;
-        --accent: #D2DAFF;
-        --background: #EEF1FF;
-    } */
+    font-family: 'MyWebFont';
+    src: url('../fonts/Rosemary 400.ttf'); /* Safari, Android, iOS */
+}
 
-:root,
-    :root.dark {
-        --text: #e6d9f7;
-        --background: #07030d;
-        --primary-button: #742bd4;
-        --secondary-button: #17092a;
-        --accent: #8241d8;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: MyWebFont;
+    text-decoration: none;
+}
 
-    :root.light {
-        --text: #031c26;
-        --background: #d5f1fc;
-        --primary-button: #a1b3f7;
-        --secondary-button: #c7b4f9;
-        --accent: #b9a1f7;
-    }
-    
-    /*============================= # =============================*/
-    
-    body {
-        background-color: var(--background);
-    }
-    
-    /*============================= header =============================*/
-    
-    header {
-        width: 100vw;
-        max-width:100%;
-        height: 100px;
-        left: 0px;
-        top: 0px;
-        background: var(--accent);
-        padding-left: 20px;
-        padding-right: 20px;
-        background-image: -moz-linear-gradient(var(--background), var(--primary-button));
-    }
-    
-    .a-title {
-        text-decoration: none;
-    }
-    
-    .title {
-        position: relative;
-        width: 50%;
-        text-align: center;
-        height: 100px;
-        line-height: 100px;
-        color: var(--text);
-        margin: auto;
-    }
-    
-    .logindiv {
-        position: absolute;
-        width: 80px;
-        height: 100px;
-        right: 20px;
-        top: 0;
-        color: var(--text);
-    }
-    
-    .blogdiv {
-        left: 20px;
-    }
-    
-    .user {
-        position: relative;
-        font-size: 40px;
-        width: 80px;
-        text-align: center;
-        top: 20px;
-    }
-    
-    .login {
-        position: relative;
-        width: 80px;
-        text-align: center;
-        font-size: medium;
-        top: 20px;
-    }
-    
-    .logindiv:hover {
-        text-decoration: underline;
-    }
+/*============================= colors =============================*/
 
-    .theme {
-        /* remove button style */
-        background: none;
-        color: inherit;
-        border: none;
-        padding: 0;
-        font: inherit;
-        cursor: pointer;
-        outline: inherit;
+/* :root {
+    --primary-button:#B1B2FF;
+    --secondary-butto: #AAC4FF;
+    --accent: #D2DAFF;
+    --background: #EEF1FF;
+} */
 
-        position: absolute;
-        width: 80px;
-        height: 100px;
-        right: 100px;
-        top: -20px;
-        color: var(--text);
-        border: none;
-    }
-    
-    .theme:hover {
-        text-decoration: underline;
-    }
-    
-    /*============================= grid =============================*/
-    
-    /*============================= index =============================*/
-    
-    .mainblog {
-        background-color: var(--primary-button);
-        color: var(--text);
-        padding: 20px;
-        border-radius: 6px;
-    }
-    
-    .blogtitle {
-        width: 100%;
-        text-align: center;
-        margin: auto;
-    }
-    
-    .blogintro {
-        text-align: center;
-        margin: auto;
-        margin: 10px;
-    }
-    
-    .blogimg {
-        height: 400px;
-        object-fit: cover;
-        width: 100%;
-    }
-    
-    .blogtxt {
-        word-wrap: break-word;
-    }
-    
-    .secblog {
-        position: relative;
-        background-color: var(--primary-button);
-        color: var(--text);
-        padding: 20px 20px 60px 20px;
-        border-radius: 6px;
-    }
-    
-    .secblogtitle {
-        border: none;
-        background-color: inherit;
-        color: var(--text);
-        width: 100%;
-        text-align: center;
-        font-size: larger;
-        margin-top: 15px;
-    }
-    
-    .secblogimg {
-        object-fit: cover;
-        width: 100%;
-        height: 350px;
-    }
-    
-    .btn {
-        background-color: var(--accent);
-        color: var(--text);
-        margin: auto;
-        width: 50%;
-        text-align: center;
-        border-radius: 100px;
-    }
-    
-    .btn:hover {
-        text-decoration: underline;
-    }
-    
-    /*============================= bloglist =============================*/
-    
-    /* .grid-container2 {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        gap: 20px;
-        padding: 20px;
-    } */
-    
-    /*============================= Login =============================*/
-        
-    /*============================= addblog =============================*/
-    
-    .b-inlogform {
-        color: var(--text);
-        width: 70%;
-        margin: auto;
-        border: solid;
-        margin-top: 20px;
-        border-radius: 6px;
-        padding: 20px;
-        background-color: var(--secondary-butto);
-        margin-bottom: 20px;
-    }
-    
-    .b-formtitle {
-        width: 100%;
-        text-align: center;
-    }
-    
-    .b-registerlink {
-        width: 100%;
-        text-align: center;
-    }
-    
-    .b-input {
-        background-color: var(--primary-button);
-        padding: 10px;
-        width: 100%;
-        border-radius: 6px;
-        border: solid black;
-    }
-    
-    .b-inputintro {
-        background-color: var(--primary-button);
-        padding: 10px;
-        width: 100%;
-        border-radius: 6px;
-        border: solid;
-        height: 100px;
-        resize: none;
-    }
-    
-    .b-inputtext {
-        background-color: var(--primary-button);
-        padding: 10px;
-        width: 100%;
-        border-radius: 6px;
-        border: solid;
-        height: 300px;
-        resize: none;
-    }
-    
-    .b-formbutton {
-        display: block;
-        margin: auto;
-        margin-top: 20px;
-        width: 150px;
-        padding: 5px;
-        justify-content: center;
-        background-color: var(--primary-button);
-        border: solid black 2px;
-        border-radius: 6px;
-        font-size: larger;
-    }
-    
-    /*============================= bigblog =============================*/
-    
-    .bigmainblog {
-        background-color: var(--primary-button);
-        color: var(--text);
-        padding: 20px;
-        margin: 20px;
-        border-radius: 6px;
-    }
-    
-    .bigblogtitle {
-        width: 100%;
-        text-align: center;
-        margin: auto;
-    }
-    
-    .bigblogintro {
-        text-align: center;
-        margin: auto;
-        margin: 10px;
-    }
-    
-    .bigblogimg {
-        height: 400px;
-        object-fit: contain;
-        width: 100%;
-    }
-    
-    /* .bigblogtxt {
+:root.dark {
+    --text: #e6d9f7;
+    --background: #07030d;
+    --primary-button: #742bd4;
+    --secondary-button: #17092a;
+    --accent: #8241d8;
+}
 
-    } */
+:root.light {
+    --text: #031c26;
+    --background: #d5f1fc;
+    --primary-button: #a1b3f7;
+    --secondary-button: #c7b4f9;
+    --accent: #b9a1f7;
+}
 
-    .date {
-        width: 100%;
-        text-align: right;
-    }
-    
-    .heart {
-        color: var(--text);
-        font-size: 30px;
-        text-decoration: none;
-    }
+/*============================= # =============================*/
 
-    .heart:hover {
-        color: black;
-    }
+body {
+    background-color: var(--background);
+}
 
-    .heartamount {
-        font-size: 20px;
-    }
+/*============================= header =============================*/
 
-    .likes {
-        margin-top: 20px;
-        display: flex;
-        height: 50px;
-        place-items: center;
-    }
+header {
+    width: 100vw;
+    max-width:100%;
+    height: 100px;
+    left: 0px;
+    top: 0px;
+    background: var(--accent);
+    padding-left: 20px;
+    padding-right: 20px;
+    background-image: -moz-linear-gradient(var(--background), var(--primary-button));
+}
 
-    .heartbtn {
-        border: none;
-        background-color: inherit;
-    }
+.a-title {
+    text-decoration: none;
+}
 
-    /*============================= Commnets =============================*/
-    
-    .commentdiv {
-        display: inline-block;
-        margin: 20px 0px 20px 0px;
-        box-sizing: content-box;
-        border-radius: 35px;
-        height: 70px;
-        background-color: var(--background);
-        width: auto;
-        color: black;
-        height: fit-content;
-        max-width: 70vw;
-    }
-    
-    .commentimg {
-        width: 70px;
-        height: 70px;
-        border-radius: 100px;
-        float: left;
-    }
-    
-    .username {
-        color: var(--text);
-        margin-top: 5px;
-        margin-left: 80px;
-        margin-right: 20px;
-        font-size: 25px;
-    }
-    
-    .commenttext {
-        color: var(--text);
-        margin-left: 80px;
-        margin-top: 10px;
-        margin-right: 20px;
-        font-size: 20px;
-        word-wrap: break-word;
-    }
-    
-    /*============================= place comments =============================*/
-    
-    .item5 { grid-area: username; }
-    .item6 { grid-area: text; }
-    .item7 { grid-area: button; }
-    .item8 { grid-area: img; }
-    
-    .grid-container3 {
-        grid-template-areas:
-        'img username button'
-        'img text button';
-        display: grid;
-        grid-template-rows: 50% 50%;
-        grid-template-columns: 70px 50% auto;
-        height: 100%;
-        width: 100%;
-        place-items: center;
-    }
-    
-    .plc-commentdiv {
-        /*____________________________________*/
-        margin-top: 20px;
-        margin-bottom: 20px;
-        display: inline-block;
-        height: 70px;
-        color: black;
-        /* background-color: var(--background); */
-        border-bottom: solid;
-        border-bottom-left-radius: 35px;
-        width: 100%;
-        color: var(--text);
-    }
-    
-    .plc-commentimg {
-        width: 70px;
-        height: 70px;
-        border-radius: 100px;
-        float: left;
-    }
-    
-    .plc-username {
-        margin-top: 5px;
-        margin-left: 75px;
-        margin-right: 20px;
-        font-size: 25px;
-        width: 100%;
-    }
-    
-    .plc-commenttext {
-        margin-left: 55px;
-        font-size: 20px;
-        border: none;
-        background-color: var(--primary-button);
-        width: 100%;
-    }
-    
-    .plc-commenttext:focus {
-        outline: none;
-        border: none;
-        text-decoration: none;
-    }
-    
-    .plc-button {
-        margin-left: auto;
-        width: 100px;
-        height: 40px;
-        background-color: var(--accent);
-        color: var(--text);
-        border-radius: 50px;
-        font-size: 20px;
-    
-        /* remove button stlye */
-        border: none;
-        padding: 0;
-        cursor: pointer;
-        outline: inherit;
-    }
-    
-    
-    
-    .grid-container {
-        gap: 20px;
-        padding: 20px;
-        height: 1000px;
-    }
-    
-    /*============================= Profile =============================*/
+.title {
+    position: relative;
+    width: 50%;
+    text-align: center;
+    height: 100px;
+    line-height: 100px;
+    color: var(--text);
+    margin: auto;
+}
+
+.logindiv {
+    position: absolute;
+    width: 80px;
+    height: 100px;
+    right: 20px;
+    top: 0;
+    color: var(--text);
+}
+
+.blogdiv {
+    left: 20px;
+}
+
+.user {
+    position: relative;
+    font-size: 40px;
+    width: 80px;
+    text-align: center;
+    top: 20px;
+}
+
+.login {
+    position: relative;
+    width: 80px;
+    text-align: center;
+    font-size: medium;
+    top: 20px;
+}
+
+.logindiv:hover {
+    text-decoration: underline;
+}
+
+.theme {
+    /* remove button style */
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+
+    position: absolute;
+    width: 80px;
+    height: 100px;
+    right: 100px;
+    top: -20px;
+    color: var(--text);
+    border: none;
+}
+
+.theme:hover {
+    text-decoration: underline;
+}
+
+/*============================= grid =============================*/
+
+/*============================= index =============================*/
+
+.mainblog {
+    background-color: var(--primary-button);
+    color: var(--text);
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.blogtitle {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+.blogintro {
+    text-align: center;
+    margin: auto;
+    margin: 10px;
+}
+
+.blogimg {
+    height: 400px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.blogtxt {
+    word-wrap: break-word;
+}
+
+.secblog {
+    position: relative;
+    background-color: var(--primary-button);
+    color: var(--text);
+    padding: 20px 20px 60px 20px;
+    border-radius: 6px;
+}
+
+.secblogtitle {
+    border: none;
+    background-color: inherit;
+    color: var(--text);
+    width: 100%;
+    text-align: center;
+    font-size: larger;
+    margin-top: 15px;
+}
+
+.secblogimg {
+    object-fit: cover;
+    width: 100%;
+    height: 350px;
+}
+
+.btn {
+    background-color: var(--accent);
+    color: var(--text);
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    border-radius: 6px;
+
+    /* hover */
+    transition: transform ease 0.2s, box-shadow ease 0.2s;
+}
+
+.btn:hover {
+    transform: translate(0, -3px);
+    box-shadow: 0 20px 80px -10px var(--accent);
+}
+
+/*============================= bloglist =============================*/
+
+/*============================= Login =============================*/
+
+/*============================= addblog =============================*/
+
+.b-inlogform {
+    color: var(--text);
+    width: 70%;
+    margin: auto;
+    border: solid;
+    margin-top: 20px;
+    border-radius: 6px;
+    padding: 20px;
+    background-color: var(--secondary-butto);
+    margin-bottom: 20px;
+}
+
+.b-formtitle {
+    width: 100%;
+    text-align: center;
+}
+
+.b-registerlink {
+    width: 100%;
+    text-align: center;
+}
+
+.b-input {
+    background-color: var(--primary-button);
+    padding: 10px;
+    width: 100%;
+    border-radius: 6px;
+    border: solid black;
+}
+
+.b-inputintro {
+    background-color: var(--primary-button);
+    padding: 10px;
+    width: 100%;
+    border-radius: 6px;
+    border: solid;
+    height: 100px;
+    resize: none;
+}
+
+.b-inputtext {
+    background-color: var(--primary-button);
+    padding: 10px;
+    width: 100%;
+    border-radius: 6px;
+    border: solid;
+    height: 300px;
+    resize: none;
+}
+
+.b-formbutton {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    width: 150px;
+    padding: 5px;
+    justify-content: center;
+    background-color: var(--primary-button);
+    border: solid black 2px;
+    border-radius: 6px;
+    font-size: larger;
+}
+
+/*============================= bigblog =============================*/
+
+.bigmainblog {
+    background-color: var(--primary-button);
+    color: var(--text);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 6px;
+}
+
+.bigblogtitle {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+.bigblogintro {
+    text-align: center;
+    margin: auto;
+    margin: 10px;
+}
+
+.bigblogimg {
+    height: 400px;
+    object-fit: contain;
+    width: 100%;
+}
+
+/* .bigblogtxt {
+
+} */
+
+.date {
+    width: 100%;
+    text-align: right;
+}
+
+.heart {
+    color: var(--text);
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.heart:hover {
+    color: black;
+}
+
+.heartamount {
+    font-size: 20px;
+}
+
+.likes {
+    margin-top: 20px;
+    display: flex;
+    height: 50px;
+    place-items: center;
+}
+
+.heartbtn {
+    border: none;
+    background-color: inherit;
+}
+
+/*============================= Commnets =============================*/
+
+.commentdiv {
+    display: inline-block;
+    margin: 20px 0px 20px 0px;
+    box-sizing: content-box;
+    border-radius: 35px;
+    height: 70px;
+    background-color: var(--background);
+    width: auto;
+    color: black;
+    height: fit-content;
+    max-width: 70vw;
+}
+
+.commentimg {
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    float: left;
+}
+
+.username {
+    color: var(--text);
+    margin-top: 5px;
+    margin-left: 80px;
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+.commenttext {
+    color: var(--text);
+    margin-left: 80px;
+    margin-top: 10px;
+    margin-right: 20px;
+    font-size: 20px;
+    word-wrap: break-word;
+}
+
+/*============================= place comments =============================*/
+
+.item5 { grid-area: username; }
+.item6 { grid-area: text; }
+.item7 { grid-area: button; }
+.item8 { grid-area: img; }
+
+.grid-container3 {
+    grid-template-areas:
+    'img username button'
+    'img text button';
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 70px 50% auto;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+}
+
+.plc-commentdiv {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+    height: 70px;
+    color: black;
+    /* background-color: var(--background); */
+    border-bottom: solid;
+    border-bottom-left-radius: 35px;
+    width: 100%;
+    color: var(--text);
+}
+
+.plc-commentimg {
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    float: left;
+}
+
+.plc-username {
+    margin-top: 5px;
+    margin-left: 75px;
+    margin-right: 20px;
+    font-size: 25px;
+    width: 100%;
+}
+
+.plc-commenttext {
+    margin-left: 55px;
+    font-size: 20px;
+    border: none;
+    background-color: var(--primary-button);
+    width: 100%;
+}
+
+.plc-commenttext:focus {
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+.plc-button {
+    margin-left: auto;
+    width: 100px;
+    height: 40px;
+    background-color: var(--accent);
+    color: var(--text);
+    border-radius: 50px;
+    font-size: 20px;
+
+    /* remove button stlye */
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: inherit;
+}
+
+
+
+.grid-container {
+    gap: 20px;
+    padding: 20px;
+    height: 1000px;
+}
+
+/*============================= Profile =============================*/

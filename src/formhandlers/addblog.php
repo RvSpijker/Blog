@@ -16,7 +16,7 @@ move_uploaded_file($tempname, $folder);
 $title = htmlentities( $_POST['title'] );
 $intro = htmlentities( $_POST['intro'] );
 $text = htmlentities( $_POST['text'] );
-$date = date("d-m-20j");
+$date = date("d-m-Y");
 
 $sql = "INSERT INTO `blog`(`title`, `intro`, `img`, `text`, `date`)
         VALUES(:title, :intro, :img, :text, :date)";

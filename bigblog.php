@@ -83,6 +83,18 @@
             <br>
 <?php } ?>
         <h4 class="date"><?= $recset[0]['date'] ?></h4>
+<?php
+    if ($user) {
+        if($user[0]['admin'] == 1) {
+?>
+        <a class="delete" href="#">
+            <form action="src/formhandlers/deleteblog.php" method="POST">
+                <button name="blog_id" value="<?=$blog_id?>" class="rmvbtn">
+                    <i class="trash fa-solid fa-trash"></i><h2 class="trashtext">Delete Blog</h2>
+                </button>
+            </form>
+        </a>
+<?php } } ?>
         </div>
     </main>
 <script src="js/main.js"></script>

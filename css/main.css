@@ -83,6 +83,10 @@ header {
     left: 20px;
 }
 
+.addadmin {
+    left: 120px;
+}
+
 .user {
     position: relative;
     font-size: 40px;
@@ -332,6 +336,28 @@ header {
     background-color: inherit;
 }
 
+.trash {
+    float: left;
+    font-size: 20px;
+    margin-right: 10px;
+    color: var(--text);
+}
+
+.trashtext {
+    font-size: 20px;
+    width: 150px;
+    color: var(--text);
+}
+
+.delete {
+    display: inline-block;
+    color: var(--text);
+}
+
+.rmvbtn {
+    all: unset;
+}
+
 /*============================= Commnets =============================*/
 
 .commentdiv {
@@ -457,3 +483,75 @@ header {
 }
 
 /*============================= Profile =============================*/
+
+/*============================= user list =============================*/
+
+.item9 {
+    grid-area: profile; 
+}
+.item10 {
+    grid-area: name;
+    line-height: 50px;
+}
+.item11 {
+    grid-area: email; 
+    line-height: 50px;
+}
+.item12 {
+    grid-area: icon; 
+    line-height: 50px;
+}
+
+.userlistdiv {
+    margin: 20px;
+    border-radius: 6px;  
+    border: 2px solid #000;
+    background: var(--secondary-button);
+    color: var(--text);
+    width: 80vw;
+    padding: 10px;
+}
+
+.userlistgrid {
+    display: grid;
+    grid-template-areas:
+    'profile name'
+    'profile email';
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 100px 400px;
+    width: 500px;
+    height: 100px;
+}
+
+.userlistform {
+    font-size: 50px;
+    text-align: center;
+}
+
+.userlistflex {
+    display: flex;
+    gap: 10px;
+    place-items: center;
+}
+
+.addadminbtn {
+    display: flex;
+    flex-direction: column;
+}
+
+.addadminlabel {
+    font-size: 18px;
+}
+
+.push {
+    margin-left: auto;
+}
+
+.userslisttitle {
+    width: 50%;
+    height: 50px;
+    line-height: 100px;
+    color: var(--text);
+    margin-top: 50px;
+    margin-left: 20px;
+}

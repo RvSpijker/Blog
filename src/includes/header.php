@@ -26,7 +26,7 @@ $user = $query -> fetchAll(PDO::FETCH_ASSOC);
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/phone.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pc.css">
     <link rel="shortcut icon" href="img/favicon2.gif" type="image/x-icon">
     <script src="https://kit.fontawesome.com/ded3297a45.js" crossorigin="anonymous"></script>
 </head>
@@ -66,6 +66,12 @@ $user = $query -> fetchAll(PDO::FETCH_ASSOC);
             <div class="blogdiv logindiv">
                 <i class="user fa-solid fa-circle-plus"></i>
                 <h3 class="login">Add Blog</h3>
+            </div>
+        </a>
+        <a href="userlist.php">
+            <div class="addadmin logindiv">
+                <i class="user fa-solid fa-user-plus"></i>
+                <h3 class="login">Add Admin</h3>
             </div>
         </a>
 <?php } } ?>
